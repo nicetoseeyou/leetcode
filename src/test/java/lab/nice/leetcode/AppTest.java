@@ -3,6 +3,10 @@ package lab.nice.leetcode;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Unit test for simple App.
  */
@@ -41,10 +45,21 @@ public class AppTest {
     }
 
     @Test
-    public void testLengthOfLongestSubstring(){
+    public void testLengthOfLongestSubstring() {
         final LongestSubstringWithoutRepeatingCharacters solution = new LongestSubstringWithoutRepeatingCharacters();
-        Assert.assertEquals("", 3, solution.lengthOfLongestSubstring("abcabcbb"));
-        Assert.assertEquals("", 1, solution.lengthOfLongestSubstring("bbbbb"));
-        Assert.assertEquals("", 3, solution.lengthOfLongestSubstring("pwwkew"));
+        Assert.assertEquals(3, solution.lengthOfLongestSubstring("abcabcbb"));
+        Assert.assertEquals(1, solution.lengthOfLongestSubstring("bbbbb"));
+        Assert.assertEquals(3, solution.lengthOfLongestSubstring("pwwkew"));
+    }
+
+    @Test
+    public void testThreeSum() {
+        int[] nums = {-1, 0, 1, 2, -1, -4};
+        final List<List<Integer>> expected = new ArrayList<>();
+        expected.add(Arrays.asList(-1, -1, 2));
+        expected.add(Arrays.asList(-1, 0, 1));
+
+        final ThreeSum solution = new ThreeSum();
+        Assert.assertEquals(expected, solution.threeSum(nums));
     }
 }
