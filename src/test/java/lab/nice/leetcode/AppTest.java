@@ -39,4 +39,12 @@ public class AppTest {
         Assert.assertEquals("Given (2 -> 4 -> 3) + (5 -> 6 -> 4) \n" +
                 "Expected result is (7 -> 0 -> 8)", expected, result);
     }
+
+    @Test
+    public void testLengthOfLongestSubstring(){
+        final LongestSubstringWithoutRepeatingCharacters solution = new LongestSubstringWithoutRepeatingCharacters();
+        Assert.assertEquals("", 3, solution.lengthOfLongestSubstring("abcabcbb"));
+        Assert.assertEquals("", 1, solution.lengthOfLongestSubstring("bbbbb"));
+        Assert.assertEquals("", 3, solution.lengthOfLongestSubstring("pwwkew"));
+    }
 }
