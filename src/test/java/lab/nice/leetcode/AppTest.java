@@ -53,6 +53,13 @@ public class AppTest {
     }
 
     @Test
+    public void testMedianOfTwoSortedArrays() {
+        final MedianOfTwoSortedArrays solution = new MedianOfTwoSortedArrays();
+        Assert.assertEquals(2.0D, solution.findMedianSortedArrays(new int[]{1, 3}, new int[]{2}), 0.0D);
+        Assert.assertEquals(2.5D, solution.findMedianSortedArrays(new int[]{1, 2}, new int[]{3, 4}), 0.0D);
+    }
+
+    @Test
     public void testThreeSum() {
         int[] nums = {-1, 0, 1, 2, -1, -4};
         final List<List<Integer>> expected = new ArrayList<>();
