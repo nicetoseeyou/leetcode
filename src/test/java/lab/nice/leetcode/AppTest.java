@@ -60,6 +60,12 @@ public class AppTest {
     }
 
     @Test
+    public void testLongestPalindromicSubstring(){
+        final LongestPalindromicSubstring solution = new LongestPalindromicSubstring();
+        Assert.assertEquals("bb", solution.longestPalindrome("cbbd"));
+    }
+
+    @Test
     public void testThreeSum() {
         int[] nums = {-1, 0, 1, 2, -1, -4};
         final List<List<Integer>> expected = new ArrayList<>();
