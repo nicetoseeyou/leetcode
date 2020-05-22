@@ -60,9 +60,15 @@ public class AppTest {
     }
 
     @Test
-    public void testLongestPalindromicSubstring(){
+    public void testLongestPalindromicSubstring() {
         final LongestPalindromicSubstring solution = new LongestPalindromicSubstring();
-        Assert.assertEquals("bb", solution.longestPalindrome("cbbd"));
+        Assert.assertEquals("abbdddddddbba", solution.longestPalindrome("cabbdddddddbbaaaaasfsfs"));
+    }
+
+    @Test
+    public void testZigzagConversion() {
+        final ZigzagConversion solution = new ZigzagConversion();
+        Assert.assertEquals("LDREOEIIECIHNTSG", solution.convert("LEETCODEISHIRING", 4));
     }
 
     @Test
