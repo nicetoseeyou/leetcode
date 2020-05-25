@@ -8,4 +8,5 @@
 | 4 | [寻找两个正序数组的中位数](src/main/java/lab/nice/leetcode/MedianOfTwoSortedArrays.java) | 转化为寻找第 K 小的数 |
 | 5 | [最长回文子串](src/main/java/lab/nice/leetcode/LongestPalindromicSubstring.java) | 中心扩散法-O(n²) 或 Manacher (die) |
 | 6 | [Z 字形变换](src/main/java/lab/nice/leetcode/ZigzagConversion.java) | 寻找周期 |
+| 7 | [整数反转](src/main/java/lab/nice/leetcode/ReverseInteger.java) | 大小溢出 |
 | 15 | [三数之和](src/main/java/lab/nice/leetcode/ThreeSum.java) | 排序、滑动窗口、去重 |

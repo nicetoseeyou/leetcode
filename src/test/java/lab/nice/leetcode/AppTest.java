@@ -16,8 +16,8 @@ public class AppTest {
         int[] nums = {2, 7, 11, 15};
         int target = 9;
         int[] expect = {0, 1};
-        TwoSum twoSum = new TwoSum();
-        int[] result = twoSum.twoSum(nums, target);
+        final TwoSum solution = new TwoSum();
+        int[] result = solution.twoSum(nums, target);
         Assert.assertArrayEquals("Given nums = [2, 7, 11, 15], target = 9 \n" +
                 "Expected result is [0, 1]", expect, result);
     }
@@ -37,8 +37,8 @@ public class AppTest {
         expected.next = new ListNode(0);
         expected.next.next = new ListNode(8);
 
-        AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
-        final ListNode result = addTwoNumbers.addTwoNumbers(first, second);
+        final AddTwoNumbers solution = new AddTwoNumbers();
+        final ListNode result = solution.addTwoNumbers(first, second);
         System.out.println(result);
         Assert.assertEquals("Given (2 -> 4 -> 3) + (5 -> 6 -> 4) \n" +
                 "Expected result is (7 -> 0 -> 8)", expected, result);
@@ -69,6 +69,21 @@ public class AppTest {
     public void testZigzagConversion() {
         final ZigzagConversion solution = new ZigzagConversion();
         Assert.assertEquals("LDREOEIIECIHNTSG", solution.convert("LEETCODEISHIRING", 4));
+    }
+
+    @Test
+    public void testReverseInteger() {
+        final ReverseInteger solution = new ReverseInteger();
+        Assert.assertEquals(0, solution.reverse(1534236469));
+        Assert.assertEquals(0, solution.reverse(Integer.MAX_VALUE));
+        Assert.assertEquals(1, solution.reverse(1));
+        Assert.assertEquals(1, solution.reverse(10));
+        Assert.assertEquals(12, solution.reverse(21));
+        Assert.assertEquals(0, solution.reverse(0));
+        Assert.assertEquals(-1, solution.reverse(-1));
+        Assert.assertEquals(-1, solution.reverse(-10));
+        Assert.assertEquals(-12, solution.reverse(-21));
+        Assert.assertEquals(0, solution.reverse(Integer.MIN_VALUE));
     }
 
     @Test
