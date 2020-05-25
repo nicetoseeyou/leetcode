@@ -87,6 +87,15 @@ public class AppTest {
     }
 
     @Test
+    public void testStringToIntegerAtoi() {
+        final StringToIntegerAtoi solution = new StringToIntegerAtoi();
+        Assert.assertEquals(-42, solution.myAtoi("   -42"));
+        Assert.assertEquals(4193, solution.myAtoi("4193 with words"));
+        Assert.assertEquals(0, solution.myAtoi("words and 987"));
+        Assert.assertEquals(-2147483648, solution.myAtoi("-91283472332"));
+    }
+
+    @Test
     public void testThreeSum() {
         int[] nums = {-1, 0, 1, 2, -1, -4};
         final List<List<Integer>> expected = new ArrayList<>();
